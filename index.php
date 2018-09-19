@@ -1,78 +1,60 @@
+ <?php 
+$page_title="Dashboard";
+$dashboard_class = "active";
+include('templates/html-start.php'); 
+?>
+<style type="text/css">
+   .dashboard-button-widget{
+      padding: 15px 30px;
+      margin-right: 1.4%;
+      margin-bottom: 20px;
+      width: 13.75%;
+      color:#ffffff;
+      float:left;
+      display:block;
+      text-align: center;
+      background-color: #546e7a;
+      -webkit-transition: all 180ms ease-in-out;
+      -moz-transition: all 180ms ease-in-out;
+      transition: all 180ms ease-in-out;
+   }
+   .dashboard-button-widget:hover{
+      color:#ffffff;
+      background-color: #1b2a31;
+      
+   }
+   .dashboard-button-widget > i{
+      text-align: center;
+      display: block;
+      font-size: 30px;
+      margin-bottom: 10px;
+   }
+</style>
+<section class="dashboard pt-20 mr-10">
 
-<!DOCTYPE html>
-<html>
-<head lang="en">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <div class="ar aione-border pl-20 pt-20 mb-20">
+    <a href="explorer.php" class="dashboard-button-widget">
+      <i class="ion-md-lock"></i>
+      File Explorer
+    </a>
+  </div>
+   
+  <?php if($user->isAdmin()): ?>
+    <div class="ar aione-border pl-20 pt-20 mb-20">
+      <a href="generate-thumbnails.php" class="dashboard-button-widget">
+        <i class="ion-ios-person"></i>
+       Generete Thumbnail
+      </a>
+      <a href="manage-users.php" class="dashboard-button-widget">
+        <i class="ion-ios-person"></i>
+        Manage Users
+      </a>
+      <a href="manage-user-role.php" class="dashboard-button-widget">
+        <i class="ion-ios-people"></i>
+        Manage User Role
+      </a>
+    </div>
+  <?php endif;?>
 
-	<title>Darlic Resource Center</title>
-
-
-	<!-- Include our stylesheet -->
-	<link href="assets/css/styles.css" rel="stylesheet"/>
-	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="assets/js/script.js"></script>
-</head>
-<body>
-
-	<!-- Popup -->
-    <div class="img_add" style="display:none;">
-		<a class="cross">X</a>
-		<img src='' alt='' class='zooming'/>
-		<div class="linkcopy">Copy File Link <input type="text" class="modlink" value=""/></div>
-	</div>
-	<!-- Popup -->
-		
-	<div class="filemanager">
-
-		<div class="search">
-			<input type="search" placeholder="Find a file.." />
-		</div>
-
-		<div class="breadcrumbs"></div>
-    
-		<ul class="data"></ul>
-
-		<div class="nothingfound">
-			<div class="nofiles"></div>
-			<span>No files here.</span>
-		</div>
-
-	</div>
-
-
-
-	<!-- Include our script files -->
-
-<script>
-$('body').on('click','.modfilepng, .modfilejpg, .modfilejpeg, .modfilegif',function(e){
-	 e.preventDefault();
-	 var url = window.location.href;
-     var jj = $(this).attr('href');
-	 var url = url.split("#");
-	 var url = url[0];
-	 
-	 var imglink = url+jj;
-	  //imglink = imglink.replace(/#files/g,'')
-	  //imglink = imglink.replace(/%2F/g,'')
-	 $(".img_add").show();
-	 $(".img_add").center();
-	 $('.modlink').val(imglink);
-	 $('img.zooming').attr('src', imglink);
-});
-
-$('body').on('click','.cross',function(e){
-	 e.preventDefault();
-	 $(".img_add").hide();
-});
-
-jQuery.fn.center = function () {
-    this.css("position","absolute");
-    this.css("top", Math.max(0, ($(document).height() - $(this).height()) / 2));
-    this.css("left", Math.max(0, ($(document).width() - $(this).width()) / 2));
-    return this;
-}
-
-</script>
-</body>
-</html>
+</section>
+<?php include('templates/html-end.php'); ?>

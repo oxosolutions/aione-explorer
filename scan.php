@@ -23,19 +23,24 @@ function scan($dir){
 				continue; // Ignore hidden files
 			}
 
+			if(!$f || $f[0] == '.') {
+				continue; // Ignore hidden files
+			}
+
 			if(is_dir($dir . '/' . $f)) {
 
+				
+				if($f == 'thumb') {
+					continue; // Ignore thumb folders
+				}
 				// The path is a folder
-
 				$files[] = array(
 					"name" => $f,
 					"type" => "folder",
 					"path" => $dir . '/' . $f,
 					"items" => scan($dir . '/' . $f) // Recursively get the contents of the folder
 				);
-			}
-			
-			else {
+			} else {
 
 				// It is a file
 

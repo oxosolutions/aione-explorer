@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+
+	<link rel="stylesheet" type="text/css" href="h.css">
+		<script type="text/javascript">
+			
+			document.addEventListener("DOMContentLoaded", function() {
+  let lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+  let active = false;
+
+  const lazyLoad = function() {
+    if (active === false) {
+      active = true;
+
+      setTimeout(function() {
+        lazyImages.forEach(function(lazyImage) {
+          if ((lazyImage.getBoundingClientRect().top <= window.innerHeight && lazyImage.getBoundingClientRect().bottom >= 0) && getComputedStyle(lazyImage).display !== "none") {
+            lazyImage.src = lazyImage.dataset.src;
+            lazyImage.srcset = lazyImage.dataset.srcset;
+            lazyImage.classList.remove("lazy");
+
+            lazyImages = lazyImages.filter(function(image) {
+              return image !== lazyImage;
+            });
+
+            if (lazyImages.length === 0) {
+              document.removeEventListener("scroll", lazyLoad);
+              window.removeEventListener("resize", lazyLoad);
+              window.removeEventListener("orientationchange", lazyLoad);
+            }
+          }
+        });
+
+        active = false;
+      }, 200);
+    }
+  };
+
+  document.addEventListener("scroll", lazyLoad);
+  window.addEventListener("resize", lazyLoad);
+  window.addEventListener("orientationchange", lazyLoad);
+});
+
+			
+		</script>
+</head>
+<body>
+		<img class="lazy" src="https://res.cloudinary.com/drp9iwjqz/image/upload/e_blur:2000,f_auto,q_auto:eco/v1508291830/jeremywagner.me/using-webp-images/tacos-1x.jpg" data-src="https://res.cloudinary.com/drp9iwjqz/image/upload/f_auto,q_auto/v1508210556/jeremywagner.me/using-webp-images/tacos-2x.jpg" data-srcset="https://res.cloudinary.com/drp9iwjqz/image/upload/f_auto,q_auto/v1508210556/jeremywagner.me/using-webp-images/tacos-2x.jpg 2x, https://res.cloudinary.com/drp9iwjqz/image/upload/f_auto,q_auto/v1508210556/jeremywagner.me/using-webp-images/tacos-1x.jpg 1x" width="385" height="108" alt="Some tacos.">
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+		<img class="lazy" src="https://res.cloudinary.com/drp9iwjqz/image/upload/e_blur:2000,f_auto,q_auto:eco/v1508210556/jeremywagner.me/using-webp-images/modem-2x.png" data-src="https://res.cloudinary.com/drp9iwjqz/image/upload/f_auto,q_auto/v1508210556/jeremywagner.me/using-webp-images/modem-2x.png" data-srcset="https://res.cloudinary.com/drp9iwjqz/image/upload/f_auto,q_auto/v1508210556/jeremywagner.me/using-webp-images/modem-2x.png 2x, https://res.cloudinary.com/drp9iwjqz/image/upload/f_auto,q_auto/v1508210556/jeremywagner.me/using-webp-images/modem-1x.png 1x" width="320" height="176" alt="A 56k modem.">
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+		<img class="lazy" src="https://res.cloudinary.com/drp9iwjqz/image/upload/e_blur:2000,f_auto,q_auto:eco/v1509298941/jeremywagner.me/about/st-paul-1x.jpg" data-src="https://res.cloudinary.com/drp9iwjqz/image/upload/f_auto,q_auto/v1509298941/jeremywagner.me/about/st-paul-2x.jpg" data-srcset="https://res.cloudinary.com/drp9iwjqz/image/upload/f_auto,q_auto/v1509298941/jeremywagner.me/about/st-paul-2x.jpg 2x, https://res.cloudinary.com/drp9iwjqz/image/upload/f_auto,q_auto/v1509298941/jeremywagner.me/about/st-paul-1x.jpg 1x" width="400" height="267" alt="A city skyline.">
+
+
+
+</body>
+</html>
+
+

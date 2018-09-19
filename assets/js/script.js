@@ -329,7 +329,26 @@ $(function(){
 
 					fileType = fileType[fileType.length-1];
 
+
+					var directory_path = f.path;
+					directory_path = directory_path.split(name);
+					directory_path = directory_path[0];
+
+					var filename = name;
+					filename = filename.split(fileType);
+					filename = filename[0];
+
+					fileType = fileType.toLowerCase();
+
 					icon = '<span class="icon file f-'+fileType+'">.'+fileType+'</span>';
+
+
+
+					var thumb = '<img src="'+directory_path+'thumb/'+filename+''+fileType+'" />';
+
+					if( fileType == 'jpg'){
+						icon = '<span class="icon file f-'+fileType+' thumb">'+thumb+'</span>';
+					}
 
 					var file = $('<li class="files"><a href="'+ f.path+'" title="'+ f.path +'" class="files modfile'+fileType+'">'+icon+'<span class="name">'+ name +'</span> <span class="details">'+fileSize+'</span></a></li>');
 					file.appendTo(fileList);

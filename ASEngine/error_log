@@ -1,0 +1,19 @@
+
+[20-Nov-2014 15:06:34 Asia/Calcutta] PHP Warning:  ksort() expects parameter 1 to be array, null given in /home/otechlab/public_html/admin/ASEngine/ASDatabase.php on line 64
+[20-Nov-2014 15:06:34 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /home/otechlab/public_html/admin/ASEngine/ASDatabase.php on line 68
+[20-Nov-2014 15:06:34 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /home/otechlab/public_html/admin/ASEngine/ASDatabase.php on line 75
+[20-Nov-2014 15:06:52 Asia/Calcutta] PHP Warning:  ksort() expects parameter 1 to be array, null given in /home/otechlab/public_html/admin/ASEngine/ASDatabase.php on line 64
+[20-Nov-2014 15:06:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /home/otechlab/public_html/admin/ASEngine/ASDatabase.php on line 68
+[20-Nov-2014 15:06:52 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /home/otechlab/public_html/admin/ASEngine/ASDatabase.php on line 75
+[20-Nov-2014 15:06:54 Asia/Calcutta] PHP Warning:  ksort() expects parameter 1 to be array, null given in /home/otechlab/public_html/admin/ASEngine/ASDatabase.php on line 64
+[20-Nov-2014 15:06:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /home/otechlab/public_html/admin/ASEngine/ASDatabase.php on line 68
+[20-Nov-2014 15:06:54 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /home/otechlab/public_html/admin/ASEngine/ASDatabase.php on line 75
+[20-Nov-2014 15:07:02 Asia/Calcutta] PHP Warning:  ksort() expects parameter 1 to be array, null given in /home/otechlab/public_html/admin/ASEngine/ASDatabase.php on line 64
+[20-Nov-2014 15:07:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /home/otechlab/public_html/admin/ASEngine/ASDatabase.php on line 68
+[20-Nov-2014 15:07:02 Asia/Calcutta] PHP Warning:  Invalid argument supplied for foreach() in /home/otechlab/public_html/admin/ASEngine/ASDatabase.php on line 75
+[30-Nov-2014 10:13:23 Asia/Calcutta] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/otechlab/public_html/admin/ASEngine/ASDatabase.php:12) in /home/otechlab/public_html/admin/ASEngine/ASSession.php on line 26
+[30-Nov-2014 10:13:23 Asia/Calcutta] PHP Warning:  session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent in /home/otechlab/public_html/admin/ASEngine/ASSession.php on line 27
+[30-Nov-2014 10:13:23 Asia/Calcutta] PHP Fatal error:  Call to a member function userLogin() on a non-object in /home/otechlab/public_html/admin/ASEngine/ASAjax.php on line 8
+[30-Nov-2014 10:23:17 Asia/Calcutta] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/otechlab/public_html/admin/ASEngine/ASDatabase.php:12) in /home/otechlab/public_html/admin/ASEngine/ASSession.php on line 26
+[30-Nov-2014 10:23:17 Asia/Calcutta] PHP Warning:  session_regenerate_id() [<a href='function.session-regenerate-id'>function.session-regenerate-id</a>]: Cannot regenerate session id - headers already sent in /home/otechlab/public_html/admin/ASEngine/ASSession.php on line 27
+[30-Nov-2014 10:23:17 Asia/Calcutta] PHP Fatal error:  Call to a member function userLogin() on a non-object in /home/otechlab/public_html/admin/ASEngine/ASAjax.php on line 8

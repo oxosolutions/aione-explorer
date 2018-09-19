@@ -1,32 +1,5 @@
 @charset "utf-8";
 
-
-/*-------------------------
-	Simple reset
---------------------------*/
-
-*{
-	margin:0;
-	padding:0;
-}
-
-
-/*-------------------------
-	Demo page
--------------------------*/
-html{
-    margin: 0;
-    padding: 0;
-}
-body {
-    background-color: #f2f2f2;
-    font: 14px normal Arial,Helvetica,sans-serif;
-    margin: 0;
-    padding: 0;
-    z-index: -4;
-}
-
-
 /*-------------------------
 	File manager
 -------------------------*/
